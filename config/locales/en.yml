@@ -1,0 +1,9 @@
+en:
+  layouts:
+    nav:
+      home:     "Home"
+      login:    "Login"
+      signup:   "Sign Up"
+      profile:  "Profile"
+      settings: "Settings"
+      logout:   "Logout"
