@@ -1,9 +1,25 @@
 en:
-  layouts:
-    nav:
-      home:     "Home"
-      login:    "Login"
-      signup:   "Sign Up"
-      profile:  "Profile"
-      settings: "Settings"
-      logout:   "Logout"
+  errors:
+    template:
+      header:
+        one:   "This form contains 1 error: "
+        other: "This form contains %{count} errors: "
+
+  home:     "Home"
+  login:    "Login"
+  signup:   "Sign Up"
+  profile:  "Profile"
+  settings: "Settings"
+  logout:   "Logout"
+  words:    "Words"
+  lessons:  "Lessons"
+  users:    "Users"
+  update_account: "Update Account Information"
+
+  success_login:  "You're now logged in."
+  fail_login:     "Invalid email/password combination."
+  logged_in:      "You're already logged in."
+  logged_out:     "You're now logged out."
+  update_user:    "Your account information is successfully updated."
+  must_login:     "You must login to continue."
+  not_authorized: "You're not authorized to access this page."

@@ -1,0 +1,3 @@
+<div class="follow-form">
+  <%= current_user.following?(user) ? render("shared/unfollow", user: user) : render("shared/follow", user: user) %>
+</div>

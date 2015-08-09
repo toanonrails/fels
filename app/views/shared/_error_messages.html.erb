@@ -1,0 +1,12 @@
+<% if object.errors.any? %>
+  <div class="error_explanation">
+    <div class="alert alert-danger">
+      <%= t "errors.template.header", count: object.errors.count %>
+    </div>
+    <ul>
+      <% object.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

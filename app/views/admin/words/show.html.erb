@@ -1,0 +1,24 @@
+<% provide :title, @word.content %>
+<h1 class="page-header">
+  <%= @word.content %>
+  <div class="action-btns">
+    <%= link_to "Edit", edit_admin_word_path(@word), class: "btn btn-primary" %>
+    <%= link_to "Delete", admin_word_path(@word), method: :delete, class: "btn btn-danger" %>
+  </div>
+</h1>
+
+<div class="row">
+  <div class="col-md-12">
+    <div>
+      <h4>Options List</h4>
+        <ul>
+          <% @word.options.each do |option| %>
+            <li>
+            <%= option.content %> |
+            <%= option.correct %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+  </div>
+</div>

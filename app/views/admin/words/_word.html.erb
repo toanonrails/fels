@@ -1,0 +1,11 @@
+<tr>
+  <td><%= link_to word.content, admin_word_path(word) %></td>
+  <td><%= word.options.is_answer[0].content %></td>
+  <td>
+    <%= link_to "Edit", edit_admin_word_path(word), class: "btn btn-primary" %>
+  </td>
+  <td>
+    <%= link_to "Delete", admin_word_path(word), method: :delete,
+                          class: "btn btn-danger", data: {confirm: "Are you sure?"} %>
+  </td>
+</tr>

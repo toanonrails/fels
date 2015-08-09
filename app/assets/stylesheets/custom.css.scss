@@ -2,5 +2,43 @@
 @import "bootstrap";
 
 body {
-  padding-top: 70px;
+  padding-top: 100px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.main {
+  border-left: 1px solid #a6a5a5;
+}
+
+.avatar {
+  border-radius: 10px;
+}
+
+.actions {
+  padding: 0px 50px;
+}
+
+.activites {
+  padding: 0px 50px;
+}
+
+.following {
+  display: inline-block;
+  padding-right: 5px;
+  border-right: 1px solid #a6a5a5;
+}
+
+.page-header {
+  margin-top: 0px;
+}
+
+.action-btns {
+  float: right;
 }

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @word] do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="form-group">
+        <%= f.label :content, class: "control-label" %>
+        <%= f.text_field :content, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :category_id, "Category", class: "control-label" %>
+        <%= f.collection_select :category_id, Category.all, :id, :name,
+                                {prompt: "Select a category"}, {class: "form-control"} %>
+      </div>
+
+        <label>Options</label>
+        <%= content_tag :span, @word.errors["options.content"][0], class: "help-block" %>
+
+        <%= f.fields_for :options do |options_form| %>
+          <%= render "option_fields", f: options_form %>
+        <% end %>
+        <%= link_to_add_fields "Add Option", f, :options %>
+
+      <div class="form-group">
+        <%= f.submit button_name, class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

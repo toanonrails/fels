@@ -1,0 +1,10 @@
+<div class="user-info col-md-3" id="<%= dom_id user %>">
+  <%= image_tag user.avatar, width: 150, class: "avatar" %>
+  <h3>
+  <%= user.name %>
+  </h3>
+  <p>Learned 52 words</p>
+  <%= render 'shared/relationship_stat', user: user %>
+  <br>
+  <%= render 'shared/follow_form', user: user unless current_user?(user) %>
+</div>

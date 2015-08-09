@@ -1,0 +1,35 @@
+<div class="row">
+  <%= render "user_info", user: @user %>
+
+  <div class="main col-md-9">
+
+    <div class="actions col-md-9">
+      <div class="col-md-6">
+        <%= link_to t(:words), root_path, class: "btn btn-lg btn-primary btn-block" %>
+      </div>
+      <div class="col-md-6">
+        <%= link_to t(:lessons), root_path, class: "btn btn-lg btn-primary btn-block" %>
+      </div>
+    </div>
+
+    <div class="activites col-md-9">
+      <h3 class="page-header">Activities</h3>
+
+<% 20.times do %>
+      <div class="media">
+        <div class="media-left">
+          <%= image_tag @user.avatar, width: 50, class: "avatar" %>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">
+          <a href="#"><%= @user.name %></a>
+          <small>3 minutes ago</small>
+          </h4>
+          <p>Learn 10 words in Lesson Basic100</p>
+        </div>
+    </div>
+
+<% end %>
+    </div>
+  </div>
+</div>

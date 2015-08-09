@@ -1,0 +1,10 @@
+<div class="relationship-stat">
+  <small>
+    <a href="#" class="following">
+      <%= user.following.count %> following
+    </a>
+    <a href="#" class="followers">
+      <%= pluralize user.followers.count, "follower" %>
+    </a>
+  </small>
+</div>

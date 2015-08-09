@@ -1,0 +1,8 @@
+<% user_selector = dom_id_for @user %>
+// Replace number of followers
+$("<%= user_selector %> .followers").html(
+  "<%= escape_javascript pluralize(@user.followers.count, 'follower')%>");
+
+// Change 'Unfollow' button to 'Follow'
+$("<%= user_selector %> .follow-form").html(
+  "<%= escape_javascript render('shared/follow', user: @user) %>")
